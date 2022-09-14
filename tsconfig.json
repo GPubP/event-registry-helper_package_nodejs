@@ -1,0 +1,45 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"outDir": "dist",
+		"declarationDir": "dist",
+		"declaration": true,
+		"rootDir": "./src",
+		"target": "es6",
+		"watch": false,
+		"allowSyntheticDefaultImports": true,
+		"emitDecoratorMetadata": true,
+		"esModuleInterop": true,
+		"experimentalDecorators": true,
+		"noImplicitAny": true,
+		"resolveJsonModule": true,
+		"sourceMap": true,
+		"strictBindCallApply": true,
+		"strictFunctionTypes": true,
+		"strictNullChecks": false,
+		"skipLibCheck": true,
+		"lib": [
+			"es2020"
+		],
+		"types": [
+			"jest",
+			"node"
+		],
+		"typeRoots": [
+			"../node_modules/@types",
+			"node_modules/@types"
+		],
+		"paths": {}
+	},
+	"include": [
+		"src/**/*.ts"
+	],
+	"exclude": [
+		"**/coverage/**",
+		"**/dist/**",
+		"**/node_modules/**",
+		"src/**/*.spec.ts"
+	]
+}

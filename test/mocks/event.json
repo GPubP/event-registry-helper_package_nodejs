@@ -1,0 +1,14 @@
+{
+	"data": {
+		"version": "v1",
+		"specVersion": "1.0",
+		"source": "content",
+		"event": "created",
+		"type": "be.digipolis.wcm.v4.content.created",
+		"dataContentType": "application/json",
+		"dataSchema": {}
+	},
+	"meta": {
+		"category": "public"
+	}
+}

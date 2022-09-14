@@ -1,0 +1,56 @@
+{
+  "name": "@wcm/event-registry-helper",
+  "version": "0.1.2",
+  "description": "Event Registry Helper",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepublishOnly": "npm run test && npm run build",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "lint": "tslint -c tslint.json -p tsconfig.json -t stylish",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "jest --config ./jest.config.js --runInBand --verbose false",
+    "test:watch": "npm run test -- --watchAll",
+    "install:peers": "install-peers -f",
+    "docs": "npm run docs:html && npm run docs:markdown",
+    "docs:html": "typedoc --plugin typedoc-plugin-missing-exports --excludeExternals true --entryPoints ./src/index.ts --excludePrivate --out docs",
+    "docs:markdown": "typedoc --plugin typedoc-plugin-markdown --plugin typedoc-github-wiki-theme --plugin typedoc-plugin-missing-exports --excludeExternals true --entryPoints ./src/index.ts --excludePrivate --theme github-wiki --out docs/markdown"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.antwerpen.be/projects/WCM/repos/wcm-event-reg-cc_service_nodejs"
+  },
+  "keywords": [
+    "WCM",
+    "Event Registry",
+    "Helper"
+  ],
+  "publishConfig": {
+    "@wcm:registry": "https://nexusrepo.antwerpen.be/repository/npm-private/"
+  },
+  "author": "Jo Smets <jo.smets@studiohyperdrive.be>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^28.1.6",
+    "@types/node": "^18.7.1",
+    "@types/node-uuid": "0.0.29",
+    "@types/sinon-express-mock": "^1.3.9",
+    "jest": "^28.1.3",
+    "jest-extended": "^3.0.1",
+    "sinon-express-mock": "^2.2.1",
+    "ts-jest": "^28.0.7",
+    "tslint": "^6.1.3",
+    "tslint-config-airbnb": "^5.11.2",
+    "typedoc": "^0.22.15",
+    "typedoc-github-wiki-theme": "^1.0.0",
+    "typedoc-plugin-markdown": "^3.11.14",
+    "typedoc-plugin-missing-exports": "^0.22.6",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@acpaas/kafka-nodejs-helper": "^1.4.0",
+    "@wcm/config-helper": "3.2.4",
+    "got": "^10.6.0",
+    "node-uuid": "^1.4.8"
+  }
+}
