@@ -52,7 +52,7 @@ export class EventRegistryHelper {
 			tenantKey,
 			'event-registry',
 			'POST',
-			'/v1/event-registry',
+			'/v1/events',
 			{
 				json: {
 					...event,
@@ -81,7 +81,7 @@ export class EventRegistryHelper {
 			tenantKey,
 			'event-registry',
 			'PATCH',
-			'/v1/event-registry',
+			'/v1/events',
 			{
 				json,
 			} as Record<string, object>
@@ -110,7 +110,7 @@ export class EventRegistryHelper {
 			tenantKey,
 			'event-registry',
 			'DELETE',
-			`/v1/event-registry/${eventUuid}`
+			`/v1/events/${eventUuid}`
 		);
 	}
 
@@ -126,7 +126,7 @@ export class EventRegistryHelper {
 			tenantKey,
 			'event-registry',
 			'GET',
-			'/v1/event-registry',
+			'/v1/events',
 			{
 				searchParams: {
 					...searchParams,
@@ -150,7 +150,7 @@ export class EventRegistryHelper {
 			tenantKey,
 			'event-registry',
 			'GET',
-			'/v1/event-registry',
+			'/v1/events',
 			{
 				searchParams,
 			} as Record<string, object>
