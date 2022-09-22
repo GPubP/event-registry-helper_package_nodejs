@@ -67,7 +67,7 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 		expect(registerCall[0]).toEqual(tenantKey),
 			expect(registerCall[1]).toEqual('event-registry'),
 			expect(registerCall[2]).toEqual('POST'),
-			expect(registerCall[3]).toEqual('/v1/event-registry'),
+			expect(registerCall[3]).toEqual('/v1/events'),
 			expect(registerCall[4]).toHaveProperty('json');
 		// tslint:disable no-any
 		expect((registerCall[4] as any).json).toHaveProperty('data', eventMock.data);
@@ -85,7 +85,7 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 		expect(registerCall[0]).toEqual(tenantKey),
 			expect(registerCall[1]).toEqual('event-registry'),
 			expect(registerCall[2]).toEqual('PATCH'),
-			expect(registerCall[3]).toEqual('/v1/event-registry'),
+			expect(registerCall[3]).toEqual('/v1/events'),
 			expect(registerCall[4]).toHaveProperty('json');
 		// tslint:disable no-any
 		expect((registerCall[4] as any).json[0]).toHaveProperty('data', eventMock.data);
@@ -121,7 +121,7 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 		expect(getCall[0]).toEqual(tenantKey);
 		expect(getCall[1]).toEqual('event-registry');
 		expect(getCall[2]).toEqual('GET');
-		expect(getCall[3]).toEqual('/v1/event-registry');
+		expect(getCall[3]).toEqual('/v1/events');
 		expect(getCall[4]).toHaveProperty('searchParams');
 		// tslint:disable no-any
 		expect((getCall[4] as any).searchParams).toHaveProperty('source', source);
@@ -132,7 +132,7 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 
 		expect(unregisterCall[0]).toEqual(tenantKey);
 		expect(unregisterCall[1]).toEqual('event-registry');
-		expect(unregisterCall[2]).toEqual('DELETE'), expect(unregisterCall[3]).toEqual('/v1/event-registry/1');
+		expect(unregisterCall[2]).toEqual('DELETE'), expect(unregisterCall[3]).toEqual('/v1/events/1');
 	});
 
 	it('should throw error on unregister if event is not found', async () => {
@@ -158,7 +158,7 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 		expect(getCall[0]).toEqual(tenantKey);
 		expect(getCall[1]).toEqual('event-registry');
 		expect(getCall[2]).toEqual('GET');
-		expect(getCall[3]).toEqual('/v1/event-registry');
+		expect(getCall[3]).toEqual('/v1/events');
 		expect(getCall[4]).toHaveProperty('searchParams');
 		// tslint:disable no-any
 		expect((getCall[4] as any).searchParams).toHaveProperty('source', source);
@@ -180,7 +180,7 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 		expect(getCall[0]).toEqual(tenantKey),
 			expect(getCall[1]).toEqual('event-registry'),
 			expect(getCall[2]).toEqual('GET'),
-			expect(getCall[3]).toEqual('/v1/event-registry'),
+			expect(getCall[3]).toEqual('/v1/events'),
 			expect(getCall[4]).toHaveProperty('searchParams');
 		// tslint:disable no-any
 		expect((getCall[4] as any).searchParams).toHaveProperty('source', source);
@@ -203,7 +203,7 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 		expect(getCall[0]).toEqual(tenantKey),
 			expect(getCall[1]).toEqual('event-registry'),
 			expect(getCall[2]).toEqual('GET'),
-			expect(getCall[3]).toEqual('/v1/event-registry'),
+			expect(getCall[3]).toEqual('/v1/events'),
 			expect(getCall[4]).toHaveProperty('searchParams');
 		// tslint:disable no-any
 		expect((getCall[4] as any).searchParams).toHaveProperty('source', source);
