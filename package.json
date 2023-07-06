@@ -26,7 +26,7 @@
     "Helper"
   ],
   "publishConfig": {
-    "@wcm:registry": "https://nexusrepo.antwerpen.be/repository/npm-private/"
+    "registry": "https://repository.antwerpen.be/repository/npm-hosted/"
   },
   "author": "Jo Smets <jo.smets@studiohyperdrive.be>",
   "license": "ISC",
