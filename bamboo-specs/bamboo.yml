@@ -1,7 +1,7 @@
 ---
 version: 2
 plan:
-  project-key: WE
+  project-key: WCM
   name: event-registry-helper_package_nodejs
   key: EVENTREGISTRYHELPERPACKAGENODEJS
 variables:
