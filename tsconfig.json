@@ -8,7 +8,6 @@
 		"declaration": true,
 		"rootDir": "./src",
 		"target": "es6",
-		"watch": false,
 		"allowSyntheticDefaultImports": true,
 		"emitDecoratorMetadata": true,
 		"esModuleInterop": true,

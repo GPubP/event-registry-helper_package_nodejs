@@ -19,16 +19,16 @@
 
 ### constructor
 
-• **new EventRegistryHelper**(`__namedParameters`)
+• **new EventRegistryHelper**(`«destructured»`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | `Object` |
-| `__namedParameters.gatewayBaseUrl` | `string` |
-| `__namedParameters.kafkaConfig` | [`IKafkaConfig`](../wiki/%3Cinternal%3E.IKafkaConfig) |
-| `__namedParameters.tenantsConfig` | `TenantsConfig` |
+| `«destructured»` | `Object` |
+| › `gatewayBaseUrl` | `string` |
+| › `kafkaConfig` | [`IKafkaConfig`](../wiki/%3Cinternal%3E.IKafkaConfig) |
+| › `tenantsConfig` | `TenantsConfig` |
 
 #### Defined in
 
@@ -58,7 +58,7 @@ index.ts:17
 
 #### Defined in
 
-index.ts:139
+index.ts:137
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-index.ts:117
+index.ts:115
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 #### Defined in
 
-index.ts:160
+index.ts:156
 
 ___
 
@@ -170,4 +170,4 @@ ___
 
 #### Defined in
 
-index.ts:91
+index.ts:89

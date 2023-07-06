@@ -1,15 +1,12 @@
 import { TenantsConfig } from '@wcm/config-helper';
 
-export const getTenantsConfigMock = ({
-	requestModuleFn = jest.fn(() => Promise.resolve()) as jest.Mock<any, any>, // tslint:disable-line no-any
-} = {}): TenantsConfig  => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const getTenantsConfigMock = ({ requestModuleFn = jest.fn(() => Promise.resolve()) as jest.Mock<any, any> } = {}): TenantsConfig  => {
 	return {
 		requestModule: requestModuleFn,
 		getModuleContext: () => ({
 			uuid: 'module-uuid',
-			data: {
-				routePrefix: 'module-route-prefix',
-			},
+			data: { routePrefix: 'module-route-prefix' }
 		}),
 		getAllApps: () => ([
 			{
@@ -17,28 +14,27 @@ export const getTenantsConfigMock = ({
 					// Cover faulty configurations in test
 					{},
 					{ module: {} },
-					{ module: {
-						data: {},
-					}},
+					{ module: { data: {} } },
 
 					{
 						module: {
-							data: {
-								routePrefix: 'module-route-prefix',
-							},
-							uuid: 'module-uuid',
-						},
-					},
-				],
-			},
+							data: { routePrefix: 'module-route-prefix' },
+							uuid: 'module-uuid'
+						}
+					}
+				]
+			}
 		]),
-		on: (event, callback) => callback(),
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		on: (event: any, callback: any) => callback()
 	} as unknown as TenantsConfig;
 };
 
 export const getEmptyTenantsConfigMock = ({
-	requestModuleFn = jest.fn(() => Promise.resolve()) as jest.Mock<any, any>, // tslint:disable-line no-any
-	getModuleContextFn = jest.fn(() => undefined) as jest.Mock<any, any>, // tslint:disable-line no-any
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	requestModuleFn = jest.fn(() => Promise.resolve()) as jest.Mock<any, any>,
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	getModuleContextFn = jest.fn(() => undefined) as jest.Mock<any, any>
 } = {}): TenantsConfig  => {
 	return {
 		requestModule: requestModuleFn,
@@ -49,21 +45,18 @@ export const getEmptyTenantsConfigMock = ({
 					// Cover faulty configurations in test
 					{},
 					{ module: {} },
-					{ module: {
-						data: {},
-					}},
+					{ module: { data: {} } },
 
 					{
 						module: {
-							data: {
-								routePrefix: 'module-route-prefix',
-							},
-							uuid: 'module-uuid',
-						},
-					},
-				],
-			},
+							data: { routePrefix: 'module-route-prefix' },
+							uuid: 'module-uuid'
+						}
+					}
+				]
+			}
 		]),
-		on: (event, callback) => callback(),
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		on: (event: any, callback: any) => callback()
 	} as unknown as TenantsConfig;
 };

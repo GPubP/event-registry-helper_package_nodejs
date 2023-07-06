@@ -1,8 +1,8 @@
 import Kafka from '@acpaas/kafka-nodejs-helper';
 
+import { EventRegistryHelper } from './index';
 import { getEmptyTenantsConfigMock, getTenantsConfigMock } from '../test/helpers/tenantsConfigMock';
 import eventMock from '../test/mocks/event.json';
-import { EventRegistryHelper } from './index';
 
 const moduleId = 'module-uuid';
 const tenantKey = 'tenant-key';
@@ -15,7 +15,8 @@ jest.useFakeTimers().setSystemTime(new Date('2022-08-16T13:53:30.415Z'));
 
 describe('[UNIT UPSERT] BraasBslHelper', () => {
 	let eventRegistryHelper: EventRegistryHelper;
-	let requestModule = jest.fn(() => Promise.resolve(true));
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	let requestModule = jest.fn(() => Promise.resolve(true) as any);
 
 	const helperConfig = {
 		gatewayBaseUrl: 'http://localhost:7200',
@@ -24,21 +25,19 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 			host: 'host',
 			ca: 'ca',
 			key: 'key',
-			cert: 'cert',
-		},
+			cert: 'cert'
+		}
 	};
 
 	beforeEach(() => {
 		eventRegistryHelper = new EventRegistryHelper({
-			tenantsConfig: getTenantsConfigMock({
-				requestModuleFn: requestModule,
-			}),
-			...helperConfig,
+			tenantsConfig: getTenantsConfigMock({ requestModuleFn: requestModule }),
+			...helperConfig
 		});
 	});
 
 	afterEach(() => {
-		// tslint:disable-next-line: no-any
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		eventRegistryHelper = null as any;
 		requestModule.mockClear();
 	});
@@ -47,15 +46,15 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 		const getModuleContext = jest.fn(() => undefined);
 		const configMock = getEmptyTenantsConfigMock({
 			requestModuleFn: requestModule,
-			getModuleContextFn: getModuleContext,
+			getModuleContextFn: getModuleContext
 		});
 
 		new EventRegistryHelper({
 			tenantsConfig: configMock,
-			...helperConfig,
+			...helperConfig
 		});
 
-		configMock.on('ready', () => {});
+		configMock.on('ready', () => ({}));
 		expect(getModuleContext).toHaveBeenCalledTimes(2);
 	});
 
@@ -65,15 +64,16 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 		const registerCall: unknown[] = requestModule.mock.calls[0];
 
 		expect(registerCall[0]).toEqual(tenantKey),
-			expect(registerCall[1]).toEqual('event-registry'),
-			expect(registerCall[2]).toEqual('POST'),
-			expect(registerCall[3]).toEqual('/v1/events'),
-			expect(registerCall[4]).toHaveProperty('json');
-		// tslint:disable no-any
+		expect(registerCall[1]).toEqual('event-registry'),
+		expect(registerCall[2]).toEqual('POST'),
+		expect(registerCall[3]).toEqual('/v1/events'),
+		expect(registerCall[4]).toHaveProperty('json');
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		expect((registerCall[4] as any).json).toHaveProperty('data', eventMock.data);
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		expect((registerCall[4] as any).json).toHaveProperty('meta', {
 			...eventMock.meta,
-			moduleId,
+			moduleId
 		});
 	});
 
@@ -83,35 +83,26 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 		const registerCall: unknown[] = requestModule.mock.calls[0];
 
 		expect(registerCall[0]).toEqual(tenantKey),
-			expect(registerCall[1]).toEqual('event-registry'),
-			expect(registerCall[2]).toEqual('PATCH'),
-			expect(registerCall[3]).toEqual('/v1/events'),
-			expect(registerCall[4]).toHaveProperty('json');
-		// tslint:disable no-any
+		expect(registerCall[1]).toEqual('event-registry'),
+		expect(registerCall[2]).toEqual('PATCH'),
+		expect(registerCall[3]).toEqual('/v1/events'),
+		expect(registerCall[4]).toHaveProperty('json');
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		expect((registerCall[4] as any).json[0]).toHaveProperty('data', eventMock.data);
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		expect((registerCall[4] as any).json[0]).toHaveProperty('meta', {
 			...eventMock.meta,
-			moduleId,
+			moduleId
 		});
 	});
 
 	it('should unregister events', async () => {
 		requestModule = jest.fn(() =>
-			Promise.resolve({
-				_embedded: {
-					events: [
-						{
-							uuid: '1',
-						},
-					],
-				},
-			})
+			Promise.resolve({ _embedded: { events: [{ uuid: '1' }] } })
 		);
 		eventRegistryHelper = new EventRegistryHelper({
-			tenantsConfig: getTenantsConfigMock({
-				requestModuleFn: requestModule,
-			}),
-			...helperConfig,
+			tenantsConfig: getTenantsConfigMock({ requestModuleFn: requestModule }),
+			...helperConfig
 		});
 		await eventRegistryHelper.unregisterEvent(tenantKey, 'content', 'created', 'v1');
 
@@ -123,11 +114,11 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 		expect(getCall[2]).toEqual('GET');
 		expect(getCall[3]).toEqual('/v1/events');
 		expect(getCall[4]).toHaveProperty('searchParams');
-		// tslint:disable no-any
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		expect((getCall[4] as any).searchParams).toHaveProperty('source', source);
-		// tslint:disable no-any
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		expect((getCall[4] as any).searchParams).toHaveProperty('event', event);
-		// tslint:disable no-any
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		expect((getCall[4] as any).searchParams).toHaveProperty('version', version);
 
 		expect(unregisterCall[0]).toEqual(tenantKey);
@@ -137,17 +128,11 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 
 	it('should throw error on unregister if event is not found', async () => {
 		requestModule = jest.fn(() =>
-			Promise.resolve({
-				_embedded: {
-					events: [],
-				},
-			})
+			Promise.resolve({ _embedded: { events: [] } })
 		);
 		eventRegistryHelper = new EventRegistryHelper({
-			tenantsConfig: getTenantsConfigMock({
-				requestModuleFn: requestModule,
-			}),
-			...helperConfig,
+			tenantsConfig: getTenantsConfigMock({ requestModuleFn: requestModule }),
+			...helperConfig
 		});
 		await expect(
 			eventRegistryHelper.unregisterEvent(tenantKey, 'content', 'created', 'v1')
@@ -160,11 +145,11 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 		expect(getCall[2]).toEqual('GET');
 		expect(getCall[3]).toEqual('/v1/events');
 		expect(getCall[4]).toHaveProperty('searchParams');
-		// tslint:disable no-any
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		expect((getCall[4] as any).searchParams).toHaveProperty('source', source);
-		// tslint:disable no-any
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		expect((getCall[4] as any).searchParams).toHaveProperty('event', event);
-		// tslint:disable no-any
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		expect((getCall[4] as any).searchParams).toHaveProperty('version', version);
 	});
 
@@ -172,21 +157,21 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 		await eventRegistryHelper.getModuleEvents(tenantKey, {
 			source,
 			event,
-			version,
+			version
 		});
 
 		const getCall: unknown[] = requestModule.mock.calls[0];
 
 		expect(getCall[0]).toEqual(tenantKey),
-			expect(getCall[1]).toEqual('event-registry'),
-			expect(getCall[2]).toEqual('GET'),
-			expect(getCall[3]).toEqual('/v1/events'),
-			expect(getCall[4]).toHaveProperty('searchParams');
-		// tslint:disable no-any
+		expect(getCall[1]).toEqual('event-registry'),
+		expect(getCall[2]).toEqual('GET'),
+		expect(getCall[3]).toEqual('/v1/events'),
+		expect(getCall[4]).toHaveProperty('searchParams');
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		expect((getCall[4] as any).searchParams).toHaveProperty('source', source);
-		// tslint:disable no-any
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		expect((getCall[4] as any).searchParams).toHaveProperty('event', event);
-		// tslint:disable no-any
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		expect((getCall[4] as any).searchParams).toHaveProperty('version', version);
 	});
 
@@ -195,22 +180,23 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 			category,
 			source,
 			version,
-			event,
+			event
 		});
 
 		const getCall: unknown[] = requestModule.mock.calls[0];
 
 		expect(getCall[0]).toEqual(tenantKey),
-			expect(getCall[1]).toEqual('event-registry'),
-			expect(getCall[2]).toEqual('GET'),
-			expect(getCall[3]).toEqual('/v1/events'),
-			expect(getCall[4]).toHaveProperty('searchParams');
-		// tslint:disable no-any
+		expect(getCall[1]).toEqual('event-registry'),
+		expect(getCall[2]).toEqual('GET'),
+		expect(getCall[3]).toEqual('/v1/events'),
+		expect(getCall[4]).toHaveProperty('searchParams');
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		expect((getCall[4] as any).searchParams).toHaveProperty('source', source);
-		// tslint:disable no-any
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		expect((getCall[4] as any).searchParams).toHaveProperty('event', event);
-		// tslint:disable no-any
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		expect((getCall[4] as any).searchParams).toHaveProperty('version', version);
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		expect((getCall[4] as any).searchParams).toHaveProperty('category', category);
 	});
 
@@ -220,7 +206,7 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 			{
 				source: 'tests',
 				event: 'test',
-				version: 'v1',
+				version: 'v1'
 			},
 			'topic',
 			'action',
@@ -236,7 +222,7 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 				version: 'v1',
 				event: 'test',
 				source: 'tests',
-				time: '2022-08-16T13:53:30.415Z',
+				time: '2022-08-16T13:53:30.415Z'
 			},
 			headers: {
 				action: 'action',
@@ -244,33 +230,31 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 				origin: 'origin',
 				timestamp: '2022-08-16T13:53:30.415Z',
 				topic: 'topic',
-				type: 'event',
+				type: 'event'
 			},
 			key: 'action',
-			topic: 'topic',
+			topic: 'topic'
 		});
 	});
 
 	it('init without all kafka credentials', async () => {
 		eventRegistryHelper = new EventRegistryHelper({
-			tenantsConfig: getTenantsConfigMock({
-				requestModuleFn: requestModule,
-			}),
+			tenantsConfig: getTenantsConfigMock({ requestModuleFn: requestModule }),
 			...helperConfig,
 			kafkaConfig: {
 				origin: '',
 				host: '',
 				ca: '',
 				key: '',
-				cert: '',
-			},
+				cert: ''
+			}
 		});
 
 		const sendSpy = jest.spyOn(Kafka.prototype, 'send').mockImplementation();
 		await eventRegistryHelper.sendMessage(
 			{
 				source: 'tests',
-				event: 'test',
+				event: 'test'
 			},
 			'topic',
 			'action',
@@ -286,7 +270,7 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 				version: 'v1',
 				event: 'test',
 				source: 'tests',
-				time: '2022-08-16T13:53:30.415Z',
+				time: '2022-08-16T13:53:30.415Z'
 			},
 			headers: {
 				action: 'action',
@@ -294,10 +278,10 @@ describe('[UNIT UPSERT] BraasBslHelper', () => {
 				origin: 'origin',
 				timestamp: '2022-08-16T13:53:30.415Z',
 				topic: 'topic',
-				type: 'event',
+				type: 'event'
 			},
 			key: 'action',
-			topic: 'topic',
+			topic: 'topic'
 		});
 	});
 });

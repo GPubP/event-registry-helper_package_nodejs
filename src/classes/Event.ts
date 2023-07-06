@@ -18,7 +18,7 @@ export class EventData {
 	readonly dataSchema: object;
 	public subject?: string;
 	public type?: string;
-	// tslint:disable-next-line: no-any
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	public data?: Record<string, any>;
 }
 
@@ -33,6 +33,5 @@ class EventList {
 }
 
 export class PaginatedEvents extends Pagination {
-	// tslint:disable-next-line: variable-name
 	public _embedded: EventList;
 }

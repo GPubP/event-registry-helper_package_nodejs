@@ -67,9 +67,9 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `config` | `Object` |
+| `config.callback` | (`message`: [`KafkaMessage`](../wiki/%3Cinternal%3E.KafkaMessage)<`unknown`\>) => `void` |
 | `config.groupId` | `string` |
 | `config.topic` | `string` |
-| `config.callback` | (`message`: [`KafkaMessage`](../wiki/%3Cinternal%3E.KafkaMessage)<`unknown`\>) => `void` |
 
 #### Returns
 

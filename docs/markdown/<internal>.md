@@ -1,4 +1,4 @@
-# Namespace: <internal\>
+# Module: <internal\>
 
 ## Table of contents
 
