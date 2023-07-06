@@ -17,7 +17,7 @@ stages:
     - Build
 
 Build:
-  key: JOB2
+  key: JOB1
   other:
     clean-working-dir: true
   tasks:
