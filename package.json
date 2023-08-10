@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "@acpaas/kafka-nodejs-helper": "1.4.0",
-    "@wcm/config-helper": "4.0.0-3",
+    "@wcm/config-helper": "4.0.2",
     "got": "11.8.6",
     "uuid": "9.0.0"
   }
