@@ -33,6 +33,7 @@ Build:
           echo "Starting publish script..."
           echo "NPM version"
           npm --version
+          npm i
           TOKEN=$(curl -s \
           -H "Accept: application/json" \
           -H "Content-Type:application/json" \
