@@ -1,6 +1,6 @@
 import Kafka from '@acpaas/kafka-nodejs-helper';
 import { ModuleConfig, TenantsConfig } from '@wcm/config-helper';
-import { v4 as uuid } from 'node-uuid';
+import { v4 as uuid } from 'uuid';
 
 import { Event, EventData, PaginatedEvents } from './classes/Event';
 import { CreateEventDto } from './dto/create-event.dto';
@@ -17,7 +17,7 @@ export class EventRegistryHelper {
 	constructor({
 		tenantsConfig,
 		kafkaConfig,
-		gatewayBaseUrl,
+		gatewayBaseUrl
 	}: { tenantsConfig: TenantsConfig, kafkaConfig: IKafkaConfig, gatewayBaseUrl: string }) {
 		this.tenantsConfig = tenantsConfig;
 		this.module = tenantsConfig.getModuleContext();
@@ -38,9 +38,9 @@ export class EventRegistryHelper {
 					rejectUnauthorized: true,
 					ca: [kafkaConfig.ca],
 					key: kafkaConfig.key,
-					cert: kafkaConfig.cert,
-				},
-			} : null),
+					cert: kafkaConfig.cert
+				}
+			} : null)
 		});
 	}
 
@@ -58,9 +58,9 @@ export class EventRegistryHelper {
 					...event,
 					meta: {
 						...event.meta,
-						moduleId: this.module.uuid,
-					},
-				},
+						moduleId: this.module.uuid
+					}
+				}
 			} as Record<string, object>
 		);
 	}
@@ -73,8 +73,8 @@ export class EventRegistryHelper {
 			...event,
 			meta: {
 				...event.meta,
-				moduleId: this.module.uuid,
-			},
+				moduleId: this.module.uuid
+			}
 		}));
 
 		return this.tenantsConfig.requestModule(
@@ -82,9 +82,7 @@ export class EventRegistryHelper {
 			'event-registry',
 			'PATCH',
 			'/v1/events',
-			{
-				json,
-			} as Record<string, object>
+			{ json } as Record<string, object>
 		);
 	}
 
@@ -97,7 +95,7 @@ export class EventRegistryHelper {
 		const moduleEvents = await this.getModuleEvents(tenantKey, {
 			source,
 			event,
-			version,
+			version
 		});
 
 		const eventUuid = moduleEvents?._embedded?.events[0]?.uuid;
@@ -130,8 +128,8 @@ export class EventRegistryHelper {
 			{
 				searchParams: {
 					...searchParams,
-					moduleId: this.module.uuid,
-				},
+					moduleId: this.module.uuid
+				}
 			} as Record<string, object>
 		);
 	}
@@ -151,9 +149,7 @@ export class EventRegistryHelper {
 			'event-registry',
 			'GET',
 			'/v1/events',
-			{
-				searchParams,
-			} as Record<string, object>
+			{ searchParams } as Record<string, object>
 		);
 	}
 
@@ -165,7 +161,7 @@ export class EventRegistryHelper {
 			dataContentType: 'application/json',
 			dataSchema: `${this.gatewayBaseUrl}/events/v1/sources/${eventData.source}/events/${eventData.event}/versions/${eventData.version || 'v1'}`,
 			time: new Date().toISOString(),
-			...eventData,
+			...eventData
 		};
 
 		return this.kafka.send({
@@ -178,8 +174,8 @@ export class EventRegistryHelper {
 				action: action || body.type,
 				type: 'event',
 				origin: this.kafkaConfig.origin,
-				timestamp: new Date().toISOString(),
-			},
+				timestamp: new Date().toISOString()
+			}
 		});
 	}
 }

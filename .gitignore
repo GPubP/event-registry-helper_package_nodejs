@@ -268,3 +268,5 @@ public/app/bower_components
 
 # Build folder
 dist
+
+**/audit.json

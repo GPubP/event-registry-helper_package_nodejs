@@ -19,8 +19,6 @@ class PaginationPage {
 }
 
 export class Pagination {
-	// tslint:disable-next-line:variable-name
 	public _links: PaginationLinks;
-	// tslint:disable-next-line:variable-name
 	public _page: PaginationPage;
 }

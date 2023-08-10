@@ -1,0 +1,66 @@
+{
+	"plugins": ["@typescript-eslint/eslint-plugin", "import"],
+	"extends": [
+		"plugin:@typescript-eslint/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"warnOnUnsupportedTypeScriptVersion": false
+	},
+	"rules": {
+		"indent": ["error", "tab"],
+		"quotes": ["error", "single"],
+		"no-tabs": ["error", { "allowIndentationTabs": true }],
+		"max-len": ["error", { "code": 160 }],
+		"no-console": "error",
+		"curly": "error",
+		"comma-dangle": ["error", "never"],
+		"array-bracket-newline": [
+			"error",
+			{
+				"multiline": true,
+				"minItems": 5
+			}
+		],
+		"array-element-newline": [
+			"error",
+			{
+				"multiline": true,
+				"minItems": 5
+			}
+		],
+		"object-curly-newline": [
+			"error",
+			{
+				"ObjectExpression": { "multiline": true, "minProperties": 3 },
+				"ObjectPattern": { "multiline": true, "minProperties": 3 },
+				"ImportDeclaration": { "multiline": true, "minProperties": 5 },
+				"ExportDeclaration": { "multiline": true, "minProperties": 5 }
+			}
+		],
+		"object-curly-spacing": ["error", "always"],
+		"@typescript-eslint/no-explicit-any": "error",
+		"import/order": [
+			2,
+			{
+				"alphabetize": { "order": "asc" },
+				"groups": [
+					[
+						"builtin",
+						"external"
+					],
+					[
+						"internal",
+						"unknown"
+					],
+					[
+						"parent",
+						"sibling",
+						"index"
+					]
+				],
+				"newlines-between": "always"
+			}
+		]
+	}
+}

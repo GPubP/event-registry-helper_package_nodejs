@@ -3,6 +3,6 @@
 - [Home](../wiki/Home)
 - [Exports](../wiki/Exports)
 
-### Namespaces
+### Modules
 
 - [<internal>](../wiki/%3Cinternal%3E)
