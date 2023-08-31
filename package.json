@@ -25,9 +25,6 @@
     "Event Registry",
     "Helper"
   ],
-  "publishConfig": {
-    "registry": "https://repository.antwerpen.be/repository/npm-hosted/"
-  },
   "author": "Jo Smets <jo.smets@studiohyperdrive.be>",
   "license": "ISC",
   "devDependencies": {
