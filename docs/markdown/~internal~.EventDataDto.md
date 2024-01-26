@@ -1,22 +1,22 @@
 # Class: EventDataDto
 
-[<internal>](../wiki/%3Cinternal%3E).EventDataDto
+[~internal~](../wiki/~internal~).EventDataDto
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](../wiki/%3Cinternal%3E.EventDataDto#constructor)
+- [constructor](../wiki/~internal~.EventDataDto#constructor)
 
 ### Properties
 
-- [dataContentType](../wiki/%3Cinternal%3E.EventDataDto#datacontenttype)
-- [dataSchema](../wiki/%3Cinternal%3E.EventDataDto#dataschema)
-- [event](../wiki/%3Cinternal%3E.EventDataDto#event)
-- [source](../wiki/%3Cinternal%3E.EventDataDto#source)
-- [specVersion](../wiki/%3Cinternal%3E.EventDataDto#specversion)
-- [type](../wiki/%3Cinternal%3E.EventDataDto#type)
-- [version](../wiki/%3Cinternal%3E.EventDataDto#version)
+- [dataContentType](../wiki/~internal~.EventDataDto#datacontenttype)
+- [dataSchema](../wiki/~internal~.EventDataDto#dataschema)
+- [event](../wiki/~internal~.EventDataDto#event)
+- [source](../wiki/~internal~.EventDataDto#source)
+- [specVersion](../wiki/~internal~.EventDataDto#specversion)
+- [type](../wiki/~internal~.EventDataDto#type)
+- [version](../wiki/~internal~.EventDataDto#version)
 
 ## Constructors
 

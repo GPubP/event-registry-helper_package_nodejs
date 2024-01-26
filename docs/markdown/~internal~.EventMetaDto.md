@@ -1,16 +1,16 @@
 # Class: EventMetaDto
 
-[<internal>](../wiki/%3Cinternal%3E).EventMetaDto
+[~internal~](../wiki/~internal~).EventMetaDto
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](../wiki/%3Cinternal%3E.EventMetaDto#constructor)
+- [constructor](../wiki/~internal~.EventMetaDto#constructor)
 
 ### Properties
 
-- [category](../wiki/%3Cinternal%3E.EventMetaDto#category)
+- [category](../wiki/~internal~.EventMetaDto#category)
 
 ## Constructors
 

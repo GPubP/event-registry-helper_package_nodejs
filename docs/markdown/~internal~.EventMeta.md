@@ -1,10 +1,10 @@
 # Class: EventMeta
 
-[<internal>](../wiki/%3Cinternal%3E).EventMeta
+[~internal~](../wiki/~internal~).EventMeta
 
 ## Hierarchy
 
-- [`Meta`](../wiki/%3Cinternal%3E.Meta)
+- [`Meta`](../wiki/~internal~.Meta)
 
   ↳ **`EventMeta`**
 
@@ -12,16 +12,16 @@
 
 ### Constructors
 
-- [constructor](../wiki/%3Cinternal%3E.EventMeta#constructor)
+- [constructor](../wiki/~internal~.EventMeta#constructor)
 
 ### Properties
 
-- [createdAt](../wiki/%3Cinternal%3E.EventMeta#createdat)
-- [deleted](../wiki/%3Cinternal%3E.EventMeta#deleted)
-- [enabled](../wiki/%3Cinternal%3E.EventMeta#enabled)
-- [lastModified](../wiki/%3Cinternal%3E.EventMeta#lastmodified)
-- [moduleId](../wiki/%3Cinternal%3E.EventMeta#moduleid)
-- [updatedAt](../wiki/%3Cinternal%3E.EventMeta#updatedat)
+- [createdAt](../wiki/~internal~.EventMeta#createdat)
+- [deleted](../wiki/~internal~.EventMeta#deleted)
+- [enabled](../wiki/~internal~.EventMeta#enabled)
+- [lastModified](../wiki/~internal~.EventMeta#lastmodified)
+- [moduleId](../wiki/~internal~.EventMeta#moduleid)
+- [updatedAt](../wiki/~internal~.EventMeta#updatedat)
 
 ## Constructors
 
@@ -31,7 +31,7 @@
 
 #### Inherited from
 
-[Meta](../wiki/%3Cinternal%3E.Meta).[constructor](../wiki/%3Cinternal%3E.Meta#constructor)
+[Meta](../wiki/~internal~.Meta).[constructor](../wiki/~internal~.Meta#constructor)
 
 ## Properties
 
@@ -41,7 +41,7 @@
 
 #### Inherited from
 
-[Meta](../wiki/%3Cinternal%3E.Meta).[createdAt](../wiki/%3Cinternal%3E.Meta#createdat)
+[Meta](../wiki/~internal~.Meta).[createdAt](../wiki/~internal~.Meta#createdat)
 
 #### Defined in
 
@@ -95,7 +95,7 @@ ___
 
 #### Inherited from
 
-[Meta](../wiki/%3Cinternal%3E.Meta).[updatedAt](../wiki/%3Cinternal%3E.Meta#updatedat)
+[Meta](../wiki/~internal~.Meta).[updatedAt](../wiki/~internal~.Meta#updatedat)
 
 #### Defined in
 

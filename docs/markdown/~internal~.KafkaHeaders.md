@@ -1,17 +1,17 @@
 # Interface: KafkaHeaders
 
-[<internal>](../wiki/%3Cinternal%3E).KafkaHeaders
+[~internal~](../wiki/~internal~).KafkaHeaders
 
 ## Table of contents
 
 ### Properties
 
-- [action](../wiki/%3Cinternal%3E.KafkaHeaders#action)
-- [correlationId](../wiki/%3Cinternal%3E.KafkaHeaders#correlationid)
-- [origin](../wiki/%3Cinternal%3E.KafkaHeaders#origin)
-- [timestamp](../wiki/%3Cinternal%3E.KafkaHeaders#timestamp)
-- [topic](../wiki/%3Cinternal%3E.KafkaHeaders#topic)
-- [type](../wiki/%3Cinternal%3E.KafkaHeaders#type)
+- [action](../wiki/~internal~.KafkaHeaders#action)
+- [correlationId](../wiki/~internal~.KafkaHeaders#correlationid)
+- [origin](../wiki/~internal~.KafkaHeaders#origin)
+- [timestamp](../wiki/~internal~.KafkaHeaders#timestamp)
+- [topic](../wiki/~internal~.KafkaHeaders#topic)
+- [type](../wiki/~internal~.KafkaHeaders#type)
 
 ## Properties
 

@@ -13,8 +13,8 @@
     "test:watch": "npm run test -- --watchAll",
     "install:peers": "install-peers -f",
     "docs": "npm run docs:html && npm run docs:markdown",
-    "docs:html": "typedoc --plugin typedoc-plugin-missing-exports --excludeExternals true --entryPoints ./src/index.ts --excludePrivate --out docs",
-    "docs:markdown": "typedoc --plugin typedoc-plugin-markdown --plugin typedoc-github-wiki-theme --plugin typedoc-plugin-missing-exports --excludeExternals true --entryPoints ./src/index.ts --excludePrivate --theme github-wiki --out docs/markdown"
+    "docs:html": "typedoc --plugin typedoc-plugin-missing-exports --internalModule ~internal~ --excludeExternals true --entryPoints ./src/index.ts --excludePrivate --out docs",
+    "docs:markdown": "typedoc --plugin typedoc-plugin-markdown --plugin typedoc-github-wiki-theme --plugin typedoc-plugin-missing-exports --internalModule ~internal~ --excludeExternals true --entryPoints ./src/index.ts --excludePrivate --theme github-wiki --out docs/markdown"
   },
   "repository": {
     "type": "git",
@@ -52,6 +52,6 @@
   },
   "peerDependencies": {
     "@acpaas/kafka-nodejs-helper": "^1.4.0",
-    "@wcm/config-helper": "^4.0.3"
+    "@wcm/config-helper": "4.4.1"
   }
 }

@@ -1,24 +1,24 @@
 # Class: EventData
 
-[<internal>](../wiki/%3Cinternal%3E).EventData
+[~internal~](../wiki/~internal~).EventData
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](../wiki/%3Cinternal%3E.EventData#constructor)
+- [constructor](../wiki/~internal~.EventData#constructor)
 
 ### Properties
 
-- [data](../wiki/%3Cinternal%3E.EventData#data)
-- [dataContentType](../wiki/%3Cinternal%3E.EventData#datacontenttype)
-- [dataSchema](../wiki/%3Cinternal%3E.EventData#dataschema)
-- [event](../wiki/%3Cinternal%3E.EventData#event)
-- [source](../wiki/%3Cinternal%3E.EventData#source)
-- [specVersion](../wiki/%3Cinternal%3E.EventData#specversion)
-- [subject](../wiki/%3Cinternal%3E.EventData#subject)
-- [type](../wiki/%3Cinternal%3E.EventData#type)
-- [version](../wiki/%3Cinternal%3E.EventData#version)
+- [data](../wiki/~internal~.EventData#data)
+- [dataContentType](../wiki/~internal~.EventData#datacontenttype)
+- [dataSchema](../wiki/~internal~.EventData#dataschema)
+- [event](../wiki/~internal~.EventData#event)
+- [source](../wiki/~internal~.EventData#source)
+- [specVersion](../wiki/~internal~.EventData#specversion)
+- [subject](../wiki/~internal~.EventData#subject)
+- [type](../wiki/~internal~.EventData#type)
+- [version](../wiki/~internal~.EventData#version)
 
 ## Constructors
 
