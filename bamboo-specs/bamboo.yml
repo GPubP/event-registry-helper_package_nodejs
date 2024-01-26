@@ -33,7 +33,7 @@ Build:
           echo "Starting publish script..."
           echo "NPM version"
           npm --version
-          npm i
+          npm i --registry=https://repository.antwerpen.be/repository/npm-all
           TOKEN=$(curl -s \
           -H "Accept: application/json" \
           -H "Content-Type:application/json" \
