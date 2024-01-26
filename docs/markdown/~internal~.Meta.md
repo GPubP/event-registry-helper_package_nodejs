@@ -1,23 +1,23 @@
 # Class: Meta
 
-[<internal>](../wiki/%3Cinternal%3E).Meta
+[~internal~](../wiki/~internal~).Meta
 
 ## Hierarchy
 
 - **`Meta`**
 
-  ↳ [`EventMeta`](../wiki/%3Cinternal%3E.EventMeta)
+  ↳ [`EventMeta`](../wiki/~internal~.EventMeta)
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](../wiki/%3Cinternal%3E.Meta#constructor)
+- [constructor](../wiki/~internal~.Meta#constructor)
 
 ### Properties
 
-- [createdAt](../wiki/%3Cinternal%3E.Meta#createdat)
-- [updatedAt](../wiki/%3Cinternal%3E.Meta#updatedat)
+- [createdAt](../wiki/~internal~.Meta#createdat)
+- [updatedAt](../wiki/~internal~.Meta#updatedat)
 
 ## Constructors
 

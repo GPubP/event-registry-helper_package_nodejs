@@ -1,17 +1,17 @@
 # Class: Kafka
 
-[<internal>](../wiki/%3Cinternal%3E).Kafka
+[~internal~](../wiki/~internal~).Kafka
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](../wiki/%3Cinternal%3E.Kafka#constructor)
+- [constructor](../wiki/~internal~.Kafka#constructor)
 
 ### Methods
 
-- [send](../wiki/%3Cinternal%3E.Kafka#send)
-- [subscribe](../wiki/%3Cinternal%3E.Kafka#subscribe)
+- [send](../wiki/~internal~.Kafka#send)
+- [subscribe](../wiki/~internal~.Kafka#subscribe)
 
 ## Constructors
 
@@ -46,7 +46,7 @@ global.d.ts:29
 
 | Name | Type |
 | :------ | :------ |
-| `message` | [`KafkaPostMessage`](../wiki/%3Cinternal%3E.KafkaPostMessage)<`unknown`\> |
+| `message` | [`KafkaPostMessage`](../wiki/~internal~.KafkaPostMessage)<`unknown`\> |
 
 #### Returns
 
@@ -67,7 +67,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `config` | `Object` |
-| `config.callback` | (`message`: [`KafkaMessage`](../wiki/%3Cinternal%3E.KafkaMessage)<`unknown`\>) => `void` |
+| `config.callback` | (`message`: [`KafkaMessage`](../wiki/~internal~.KafkaMessage)<`unknown`\>) => `void` |
 | `config.groupId` | `string` |
 | `config.topic` | `string` |
 

@@ -27,7 +27,7 @@
 | :------ | :------ |
 | `«destructured»` | `Object` |
 | › `gatewayBaseUrl` | `string` |
-| › `kafkaConfig` | [`IKafkaConfig`](../wiki/%3Cinternal%3E.IKafkaConfig) |
+| › `kafkaConfig` | [`IKafkaConfig`](../wiki/~internal~.IKafkaConfig) |
 | › `tenantsConfig` | `TenantsConfig` |
 
 #### Defined in
@@ -38,7 +38,7 @@ index.ts:17
 
 ### getEvents
 
-▸ **getEvents**(`tenantKey`, `searchParams?`): `Promise`<[`PaginatedEvents`](../wiki/%3Cinternal%3E.PaginatedEvents)\>
+▸ **getEvents**(`tenantKey`, `searchParams?`): `Promise`<[`PaginatedEvents`](../wiki/~internal~.PaginatedEvents)\>
 
 #### Parameters
 
@@ -54,7 +54,7 @@ index.ts:17
 
 #### Returns
 
-`Promise`<[`PaginatedEvents`](../wiki/%3Cinternal%3E.PaginatedEvents)\>
+`Promise`<[`PaginatedEvents`](../wiki/~internal~.PaginatedEvents)\>
 
 #### Defined in
 
@@ -64,7 +64,7 @@ ___
 
 ### getModuleEvents
 
-▸ **getModuleEvents**(`tenantKey`, `searchParams?`): `Promise`<[`PaginatedEvents`](../wiki/%3Cinternal%3E.PaginatedEvents)\>
+▸ **getModuleEvents**(`tenantKey`, `searchParams?`): `Promise`<[`PaginatedEvents`](../wiki/~internal~.PaginatedEvents)\>
 
 #### Parameters
 
@@ -78,7 +78,7 @@ ___
 
 #### Returns
 
-`Promise`<[`PaginatedEvents`](../wiki/%3Cinternal%3E.PaginatedEvents)\>
+`Promise`<[`PaginatedEvents`](../wiki/~internal~.PaginatedEvents)\>
 
 #### Defined in
 
@@ -88,18 +88,18 @@ ___
 
 ### registerEvent
 
-▸ **registerEvent**(`tenantKey`, `event`): `Promise`<[`Event`](../wiki/%3Cinternal%3E.Event)\>
+▸ **registerEvent**(`tenantKey`, `event`): `Promise`<[`Event`](../wiki/~internal~.Event)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `tenantKey` | `string` |
-| `event` | [`CreateEventDto`](../wiki/%3Cinternal%3E.CreateEventDto) |
+| `event` | [`CreateEventDto`](../wiki/~internal~.CreateEventDto) |
 
 #### Returns
 
-`Promise`<[`Event`](../wiki/%3Cinternal%3E.Event)\>
+`Promise`<[`Event`](../wiki/~internal~.Event)\>
 
 #### Defined in
 
@@ -109,18 +109,18 @@ ___
 
 ### registerEvents
 
-▸ **registerEvents**(`tenantKey`, `events`): `Promise`<[`Event`](../wiki/%3Cinternal%3E.Event)\>
+▸ **registerEvents**(`tenantKey`, `events`): `Promise`<[`Event`](../wiki/~internal~.Event)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `tenantKey` | `string` |
-| `events` | [`UpsertEventDto`](../wiki/%3Cinternal%3E.UpsertEventDto)[] |
+| `events` | [`UpsertEventDto`](../wiki/~internal~.UpsertEventDto)[] |
 
 #### Returns
 
-`Promise`<[`Event`](../wiki/%3Cinternal%3E.Event)\>
+`Promise`<[`Event`](../wiki/~internal~.Event)\>
 
 #### Defined in
 
@@ -136,7 +136,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `eventData` | `Partial`<[`EventData`](../wiki/%3Cinternal%3E.EventData)\> |
+| `eventData` | `Partial`<[`EventData`](../wiki/~internal~.EventData)\> |
 | `topic` | `string` |
 | `action?` | `string` |
 | `correlationId` | `string` |
@@ -153,7 +153,7 @@ ___
 
 ### unregisterEvent
 
-▸ **unregisterEvent**(`tenantKey`, `source`, `event`, `version`): `Promise`<[`Event`](../wiki/%3Cinternal%3E.Event)\>
+▸ **unregisterEvent**(`tenantKey`, `source`, `event`, `version`): `Promise`<[`Event`](../wiki/~internal~.Event)\>
 
 #### Parameters
 
@@ -166,7 +166,7 @@ ___
 
 #### Returns
 
-`Promise`<[`Event`](../wiki/%3Cinternal%3E.Event)\>
+`Promise`<[`Event`](../wiki/~internal~.Event)\>
 
 #### Defined in
 

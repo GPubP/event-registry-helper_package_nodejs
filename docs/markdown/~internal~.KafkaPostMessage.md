@@ -1,6 +1,6 @@
 # Interface: KafkaPostMessage<T\>
 
-[<internal>](../wiki/%3Cinternal%3E).KafkaPostMessage
+[~internal~](../wiki/~internal~).KafkaPostMessage
 
 ## Type parameters
 
@@ -12,10 +12,10 @@
 
 ### Properties
 
-- [body](../wiki/%3Cinternal%3E.KafkaPostMessage#body)
-- [headers](../wiki/%3Cinternal%3E.KafkaPostMessage#headers)
-- [key](../wiki/%3Cinternal%3E.KafkaPostMessage#key)
-- [topic](../wiki/%3Cinternal%3E.KafkaPostMessage#topic)
+- [body](../wiki/~internal~.KafkaPostMessage#body)
+- [headers](../wiki/~internal~.KafkaPostMessage#headers)
+- [key](../wiki/~internal~.KafkaPostMessage#key)
+- [topic](../wiki/~internal~.KafkaPostMessage#topic)
 
 ## Properties
 
@@ -31,7 +31,7 @@ ___
 
 ### headers
 
-• **headers**: [`KafkaHeaders`](../wiki/%3Cinternal%3E.KafkaHeaders)
+• **headers**: [`KafkaHeaders`](../wiki/~internal~.KafkaHeaders)
 
 #### Defined in
 

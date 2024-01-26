@@ -4,7 +4,7 @@
 
 ### Modules
 
-- [&lt;internal\&gt;](../wiki/%3Cinternal%3E)
+- [~internal~](../wiki/~internal~)
 
 ### Classes
 
