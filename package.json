@@ -1,6 +1,6 @@
 {
   "name": "@wcm/event-registry-helper",
-  "version": "1.0.2-1",
+  "version": "1.0.2-2",
   "description": "Event Registry Helper",
   "main": "dist/index.js",
   "scripts": {
