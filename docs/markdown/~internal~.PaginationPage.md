@@ -1,19 +1,19 @@
 # Class: PaginationPage
 
-[<internal>](../wiki/%3Cinternal%3E).PaginationPage
+[~internal~](../wiki/~internal~).PaginationPage
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](../wiki/%3Cinternal%3E.PaginationPage#constructor)
+- [constructor](../wiki/~internal~.PaginationPage#constructor)
 
 ### Properties
 
-- [number](../wiki/%3Cinternal%3E.PaginationPage#number)
-- [size](../wiki/%3Cinternal%3E.PaginationPage#size)
-- [totalElements](../wiki/%3Cinternal%3E.PaginationPage#totalelements)
-- [totalPages](../wiki/%3Cinternal%3E.PaginationPage#totalpages)
+- [number](../wiki/~internal~.PaginationPage#number)
+- [size](../wiki/~internal~.PaginationPage#size)
+- [totalElements](../wiki/~internal~.PaginationPage#totalelements)
+- [totalPages](../wiki/~internal~.PaginationPage#totalpages)
 
 ## Constructors
 

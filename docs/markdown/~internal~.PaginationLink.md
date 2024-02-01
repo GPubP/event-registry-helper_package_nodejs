@@ -1,16 +1,16 @@
 # Class: PaginationLink
 
-[<internal>](../wiki/%3Cinternal%3E).PaginationLink
+[~internal~](../wiki/~internal~).PaginationLink
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](../wiki/%3Cinternal%3E.PaginationLink#constructor)
+- [constructor](../wiki/~internal~.PaginationLink#constructor)
 
 ### Properties
 
-- [href](../wiki/%3Cinternal%3E.PaginationLink#href)
+- [href](../wiki/~internal~.PaginationLink#href)
 
 ## Constructors
 

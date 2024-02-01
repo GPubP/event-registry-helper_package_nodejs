@@ -6,7 +6,7 @@ plan:
   key: EVENTREGISTRYHELPERPACKAGENODEJS
 variables:
   NPM_USER: bamboo-npm-publisher
-  REGISTRY: https://repository.antwerpen.be/repository/npm-hosted
+  REGISTRY: https://repository.antwerpen.be/repository/npm-all
   SECRET: BAMSCRT@0@0@OAOWXH7sfhYtg+etKmSLYLceYFp5Jj7o/h2wAMagjbE=
 
 stages:
@@ -33,13 +33,13 @@ Build:
           echo "Starting publish script..."
           echo "NPM version"
           npm --version
-          npm i
+          npm i --registry=https://repository.antwerpen.be/repository/npm-all
           TOKEN=$(curl -s \
           -H "Accept: application/json" \
           -H "Content-Type:application/json" \
           -X PUT --data '{"name": "${bamboo.NPM_USER}", "password": "${bamboo.SECRET}"}' \
-          https://repository.antwerpen.be/repository/npm-hosted/-/user/org.couchdb.user:bamboo-npm-publisher | grep -o '"token":"[^"]*' | grep -o '[^"]*$')
-          npm set //repository.antwerpen.be/repository/npm-hosted/:_authToken=${TOKEN}
+          https://repository.antwerpen.be/repository/npm-all/-/user/org.couchdb.user:bamboo-npm-publisher | grep -o '"token":"[^"]*' | grep -o '[^"]*$')
+          npm set //repository.antwerpen.be/repository/:_authToken=${TOKEN}
           npm publish --registry ${bamboo.REGISTRY}
           echo "Done publishing package"
   docker:

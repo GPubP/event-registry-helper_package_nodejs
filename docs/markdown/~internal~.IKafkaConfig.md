@@ -1,16 +1,16 @@
 # Interface: IKafkaConfig
 
-[<internal>](../wiki/%3Cinternal%3E).IKafkaConfig
+[~internal~](../wiki/~internal~).IKafkaConfig
 
 ## Table of contents
 
 ### Properties
 
-- [ca](../wiki/%3Cinternal%3E.IKafkaConfig#ca)
-- [cert](../wiki/%3Cinternal%3E.IKafkaConfig#cert)
-- [host](../wiki/%3Cinternal%3E.IKafkaConfig#host)
-- [key](../wiki/%3Cinternal%3E.IKafkaConfig#key)
-- [origin](../wiki/%3Cinternal%3E.IKafkaConfig#origin)
+- [ca](../wiki/~internal~.IKafkaConfig#ca)
+- [cert](../wiki/~internal~.IKafkaConfig#cert)
+- [host](../wiki/~internal~.IKafkaConfig#host)
+- [key](../wiki/~internal~.IKafkaConfig#key)
+- [origin](../wiki/~internal~.IKafkaConfig#origin)
 
 ## Properties
 

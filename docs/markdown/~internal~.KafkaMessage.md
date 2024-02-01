@@ -1,6 +1,6 @@
 # Interface: KafkaMessage<T\>
 
-[<internal>](../wiki/%3Cinternal%3E).KafkaMessage
+[~internal~](../wiki/~internal~).KafkaMessage
 
 ## Type parameters
 
@@ -12,13 +12,13 @@
 
 ### Properties
 
-- [attributes](../wiki/%3Cinternal%3E.KafkaMessage#attributes)
-- [headers](../wiki/%3Cinternal%3E.KafkaMessage#headers)
-- [key](../wiki/%3Cinternal%3E.KafkaMessage#key)
-- [magicByte](../wiki/%3Cinternal%3E.KafkaMessage#magicbyte)
-- [offset](../wiki/%3Cinternal%3E.KafkaMessage#offset)
-- [timestamp](../wiki/%3Cinternal%3E.KafkaMessage#timestamp)
-- [value](../wiki/%3Cinternal%3E.KafkaMessage#value)
+- [attributes](../wiki/~internal~.KafkaMessage#attributes)
+- [headers](../wiki/~internal~.KafkaMessage#headers)
+- [key](../wiki/~internal~.KafkaMessage#key)
+- [magicByte](../wiki/~internal~.KafkaMessage#magicbyte)
+- [offset](../wiki/~internal~.KafkaMessage#offset)
+- [timestamp](../wiki/~internal~.KafkaMessage#timestamp)
+- [value](../wiki/~internal~.KafkaMessage#value)
 
 ## Properties
 
@@ -34,7 +34,7 @@ ___
 
 ### headers
 
-• **headers**: [`KafkaHeaders`](../wiki/%3Cinternal%3E.KafkaHeaders)
+• **headers**: [`KafkaHeaders`](../wiki/~internal~.KafkaHeaders)
 
 #### Defined in
 
