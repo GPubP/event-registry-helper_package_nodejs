@@ -52,6 +52,6 @@
   },
   "peerDependencies": {
     "@acpaas/kafka-nodejs-helper": "^1.4.0",
-    "@wcm/config-helper": "4.4.1"
+    "@wcm/config-helper": "^5.0.0"
   }
 }
