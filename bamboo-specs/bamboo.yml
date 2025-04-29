@@ -43,6 +43,6 @@ Build:
           npm publish --registry ${bamboo.REGISTRY}
           echo "Done publishing package"
   docker:
-    image: node:18
+    image: node:22
   requirements:
         - system.docker.executable
