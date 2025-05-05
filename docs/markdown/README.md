@@ -1,3 +1,7 @@
+**@wcm/event-registry-helper**
+
+***
+
 # WCM Event Registry Helper #
 
 This packages provides the tools to register and send events. 
