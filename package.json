@@ -48,7 +48,6 @@
     "typescript-eslint": "8.31.1"
   },
   "dependencies": {
-    "got": "11.8.6",
     "uuid": "9.0.0"
   },
   "peerDependencies": {
